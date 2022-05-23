@@ -1,7 +1,4 @@
 node ('node_java_11') {
-    triggers{
-        cron ('H * * * *')
-    }
         stage ('scm'){
             git 'https://github.com/venkatesh-pogula/jenkins_spring.git'
         }
