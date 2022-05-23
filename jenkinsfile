@@ -1,9 +1,9 @@
 node ('node_java_11') {
         stage ('scm'){
-            git 'https://github.com/venkatesh-pogula/jenkins_spring.git'
+            git branch: 'main' url: 'https://github.com/venkatesh-pogula/jenkins_spring.git'
         }
         stage ('build'){
-            sh '''cd /spring-petclinic/Jenkinsfile
+            sh '''cd /spring-petclinic
                    mvn clean package'''
         }
         post{
