@@ -3,8 +3,7 @@ node ('node_java_11') {
             git branch:'scripted', url:'https://github.com/venkatesh-pogula/jenkins_spring.git'
         }
         stage ('build'){
-            sh '''cd /spring-petclinic
-                   mvn clean package'''
+            sh ' mvn clean package'
         }
         post{
         sucess {
