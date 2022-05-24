@@ -5,11 +5,11 @@ node ('node_java_11') {
         stage ('build'){
             sh ' mvn clean package'
         }
-        post{
-        sucess {
-            archive '**/*.jar'
-            junit '**/TEST-*.xml'
-
-            }
-       } 
+        stage('Archive artifact'){
+          archiveArtifacts artifacts: '***/*.jar', followSymlinks: false
+        }
+        stage('Junit Test'){
+          junit '*.xml'
+        }
+        
 }       
