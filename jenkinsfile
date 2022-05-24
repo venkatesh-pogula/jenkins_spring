@@ -9,7 +9,7 @@ node ('node_java_11') {
           archiveArtifacts artifacts: '***/*.jar', followSymlinks: false
         }
         stage('Junit Test'){
-          junit '*.xml'
+          junit '**/surefile-reports/*.xml'
         }
         
 }       
