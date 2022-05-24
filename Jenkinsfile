@@ -16,12 +16,11 @@ pipeline {
               }       
         }
      }    
-          post{
-          sucess{
-              archive '**/*.jar'
-              junit '**/TEST-*.xml'
-
-            }
+     post{
+        success {
+            archive '**/*.jar'
+            junit '**/TEST-*.xml'
+           }
        } 
 }  
 
